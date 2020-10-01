@@ -5,7 +5,11 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        ocean: '#072540',
+      },
+    },
   },
   variants: {},
   plugins: [],
