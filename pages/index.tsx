@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar'
 import Hero from '../components/hero'
-import Keynote from '../components/keynote'
+import Speakers from '../components/speakers'
 import Tracks from '../components/tracks'
 import Partners from '../components/partners'
 import SocialMedia from '../components/social-media'
@@ -16,7 +16,7 @@ const Home = (): JSX.Element => {
       </Head>
       <Navbar />
       <Hero />
-      <Keynote />
+      <Speakers />
       <Tracks />
       <Partners />
       <SocialMedia />

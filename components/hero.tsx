@@ -23,8 +23,8 @@ const Hero = (): JSX.Element => (
           <span className='px-6 italic text-sm'>Schedule available soon</span>
         </div>
       </div>
-      <div>
-        <img src='/img/htf-logo.svg' style={{ maxHeight: '250px', width: 'auto' }} />
+      <div className='pr-20'>
+        <img src='/img/acm-htf.png' style={{ maxHeight: '400px', width: 'auto' }} />
       </div>
     </div>
   </div>

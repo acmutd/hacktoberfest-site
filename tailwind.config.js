@@ -11,9 +11,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        ocean: '#072540',
-        pond: '#93C2DB',
-        lake: '#183D5D',
+        ocean: '#11194C',
+        pond: '#9BC1D9',
+        lake: '#233283',
         fuschia: '#FF8AE2',
         grayed: 'rgba(198,198,198,0.6)',
       },
