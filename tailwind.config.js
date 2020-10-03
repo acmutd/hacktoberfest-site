@@ -14,6 +14,7 @@ module.exports = {
         ocean: '#11194C',
         pond: '#9BC1D9',
         lake: '#233283',
+        cerulean: '#2780C0',
         fuschia: '#FF8AE2',
         grayed: 'rgba(198,198,198,0.6)',
       },
