@@ -18,9 +18,6 @@ module.exports = {
         fuschia: '#FF8AE2',
         grayed: 'rgba(198,198,198,0.6)',
       },
-      minWidth: {
-        '1/2': '50%',
-      },
     },
   },
   variants: {
