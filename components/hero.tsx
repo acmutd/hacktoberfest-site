@@ -17,14 +17,16 @@ const Hero = (): JSX.Element => (
           className='mt-2'
         />
         <div className='w-full flex-row items-center'>
-          <button className='mt-6 rounded-full py-2 px-8 text-lg bg-pond hover:bg-blue-300 hover:text-black text-ocean font-bold'>
+          <button
+            onClick={() => (window.location.href = '//apply.acmutd.co/hack')}
+            className='mt-6 rounded-full py-2 px-8 text-lg bg-pond hover:bg-blue-300 hover:text-black text-ocean font-bold'>
             Register now
           </button>
           <span className='px-6 italic text-sm'>Schedule available soon</span>
         </div>
       </div>
-      <div>
-        <img src='/img/htf-logo.svg' style={{ maxHeight: '250px', width: 'auto' }} />
+      <div className='lg:pr-20 xl:pr-20'>
+        <img src='/img/acm-htf.png' style={{ maxHeight: '400px', width: 'auto' }} />
       </div>
     </div>
   </div>
