@@ -18,7 +18,8 @@ const TrackCard: FunctionComponent<TrackCardProps> = (
           borderBottomRightRadius: '30px',
           maxWidth: '1000px',
         }}
-        onClick={() => setVisible(!visible)}>
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        onClick={() => {} /*setVisible(!visible)*/}>
         <div className='w-1/3 font-medium text-3xl'>{props.name}</div>
         <div className='w-2/3 text-left px-10'>{props.description}</div>
       </button>

@@ -28,15 +28,15 @@ const Home = (): JSX.Element => {
       <section ref={homeRef}>
         <Hero />
       </section>
-      <section>
+      {/* <section>
         <Speakers />
-      </section>
+      </section> */}
       <section ref={experienceRef}>
         <Tracks />
       </section>
-      <section ref={partnersRef}>
+      {/* <section ref={partnersRef}>
         <Partners />
-      </section>
+      </section> */}
       <section ref={socialMediaRef}>
         <SocialMedia />
       </section>
