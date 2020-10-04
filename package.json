@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out -t true -b gh-pages -m \"Build site from master branch\""
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -24,6 +25,8 @@
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-react": "^7.21.2",
+    "gh-pages": "^3.1.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
     "tailwindcss": "^1.8.10",
