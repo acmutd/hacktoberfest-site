@@ -28,7 +28,7 @@ const Navbar: FunctionComponent<NavbarProps> = (props: NavbarProps) => (
       <a
         onClick={() => scrollToRef(props.faqRef)}
         className='link cursor-pointer font-medium text-xl text-grayed'>
-        FAQ
+        FAQs
       </a>
       <a
         onClick={() => scrollToRef(props.socialMediaRef)}
