@@ -12,7 +12,7 @@ const TrackCard: FunctionComponent<TrackCardProps> = (
   return (
     <>
       <button
-        className='bg-lake mx-auto mt-8 px-4 py-8 flex flex-row items-center cursor-pointer'
+        className='bg-lake mx-auto mt-8 px-4 py-8 flex flex-row items-center cursor-pointer hover:bg-blue-300 hover:text-black'
         style={{
           borderTopLeftRadius: '30px',
           borderBottomRightRadius: '30px',
