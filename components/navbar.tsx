@@ -17,22 +17,22 @@ const Navbar: FunctionComponent<NavbarProps> = (props: NavbarProps) => (
     <div className='w-full sm:w-full md:w-full lg:w-2/3 xl:w-3/10 flex items-center justify-between px-8'>
       <a
         onClick={() => scrollToRef(props.homeRef)}
-        className='link cursor-pointer font-medium text-xl text-grayed'>
+        className='link cursor-pointer font-medium text-xl text-grayed hover:text-fuschia'>
         Home
       </a>
       <a
         onClick={() => scrollToRef(props.experienceRef)}
-        className='link cursor-pointer font-medium text-xl text-grayed'>
+        className='link cursor-pointer font-medium text-xl text-grayed hover:text-fuschia'>
         Experience
       </a>
       <a
         onClick={() => scrollToRef(props.faqRef)}
-        className='link cursor-pointer font-medium text-xl text-grayed'>
+        className='link cursor-pointer font-medium text-xl text-grayed hover:text-fuschia'>
         FAQs
       </a>
       <a
         onClick={() => scrollToRef(props.socialMediaRef)}
-        className='link cursor-pointer font-medium text-xl text-grayed'>
+        className='link cursor-pointer font-medium text-xl text-grayed hover:text-fuschia'>
         Social Media
       </a>
     </div>

@@ -10,6 +10,10 @@ const faq: FAQFormat[] = [
       'ACM Hacktoberfest will be a full day event filled with tons of fun workshops, talks & fun events!',
   },
   {
+    q: 'Is ACM Hacktoberfest a hackathon?',
+    a: 'Nope! This event is a casual come and go event with lots of opportunities to interact, learn and have a great time!',
+  },
+  {
     q: 'When is ACM Hacktoberfest?',
     a:
       'ACM Hacktoberfest will take place on October 17th from 9am-9pm. There will also be lots of opportunities to socialize and have fun after the festivities!',
