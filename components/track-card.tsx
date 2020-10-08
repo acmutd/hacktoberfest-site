@@ -1,34 +1,18 @@
-import { FunctionComponent, PropsWithChildren, useState } from 'react'
+import { FunctionComponent, useState } from 'react'
 
 type TrackCardProps = {
   name: string
   description: string
 }
 
-const TrackCard: FunctionComponent<TrackCardProps> = (
-  props: PropsWithChildren<TrackCardProps>
-): JSX.Element => {
-  const [visible, setVisible] = useState(false)
+const TrackCard: FunctionComponent<TrackCardProps> = (props: TrackCardProps): JSX.Element => {
   return (
-    <>
-      <button
-        className='bg-lake mx-auto mt-8 px-4 py-8 flex flex-row items-center cursor-pointer hover:bg-blue-300 hover:text-black'
-        style={{
-          borderTopLeftRadius: '30px',
-          borderBottomRightRadius: '30px',
-          maxWidth: '1000px',
-        }}
-        // eslint-disable-next-line @typescript-eslint/no-empty-function
-        onClick={() => {} /*setVisible(!visible)*/}>
-        <div className='w-1/3 font-medium text-3xl'>{props.name}</div>
-        <div className='w-2/3 text-left px-10'>{props.description}</div>
-      </button>
-      {visible && (
-        <div style={{ maxWidth: '960px' }} className='my-0 py-6 mx-auto bg-cerulean rounded-b-md'>
-          {props.children}
-        </div>
-      )}
-    </>
+    <div
+      className='bg-lake px-6 py-8 w-full xl:w-1/3 mx-8 my-4 transform hover:scale-105 transition-all ease-in-out duration-200'
+      style={{ borderTopLeftRadius: '30px', borderBottomRightRadius: '30px' }}>
+      <div className='text-center font-medium text-3xl mb-2'>{props.name}</div>
+      <div className='text-left'>{props.description}</div>
+    </div>
   )
 }
 
