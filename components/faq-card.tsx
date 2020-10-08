@@ -10,7 +10,7 @@ const FAQCard = (props: FAQCardProps): JSX.Element => {
   const arrow = expanded ? '\u25BC' : '\u25B6'
   const toggle = () => setExpanded(!expanded)
   return (
-    <div className='mx-auto px-8 py-1' style={{ maxWidth: '1000px' }}>
+    <div className='mx-auto px-8' style={{ maxWidth: '970px' }}>
       <div className='flex flex-row items-top pb-4 text-white hover:text-fuschia transition-all duration-75 ease-in-out'>
         <div className='pr-10 text-xl cursor-pointer select-none' onClick={toggle}>
           {arrow}
