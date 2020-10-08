@@ -6,6 +6,7 @@ type NavbarProps = {
   homeRef: Ref<unknown>
   experienceRef: Ref<unknown>
   partnersRef: Ref<unknown>
+  faqRef: Ref<unknown>
   socialMediaRef: Ref<unknown>
 }
 
@@ -25,9 +26,9 @@ const Navbar: FunctionComponent<NavbarProps> = (props: NavbarProps) => (
         Experience
       </a>
       <a
-        onClick={() => scrollToRef(props.partnersRef)}
+        onClick={() => scrollToRef(props.faqRef)}
         className='link cursor-pointer font-medium text-xl text-grayed'>
-        Partners
+        FAQs
       </a>
       <a
         onClick={() => scrollToRef(props.socialMediaRef)}
