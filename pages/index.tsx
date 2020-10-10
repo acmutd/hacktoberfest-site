@@ -33,18 +33,22 @@ const Home = (): JSX.Element => {
       {/* <section>
         <Speakers />
       </section> */}
+      <a id='experience' />
       <section ref={experienceRef}>
         <Tracks />
       </section>
+      <a id='schedule' />
       <section ref={scheduleRef}>
         <Schedule />
       </section>
       {/* <section ref={partnersRef}>
         <Partners />
       </section> */}
+      <a id='faq' />
       <section ref={faqRef}>
         <FAQ />
       </section>
+      <a id='social-media' />
       <section ref={socialMediaRef}>
         <SocialMedia />
       </section>
