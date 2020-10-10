@@ -22,7 +22,6 @@ const Hero = (): JSX.Element => (
             className='mt-6 rounded-full py-2 px-8 text-lg bg-pond hover:bg-blue-300 hover:text-black text-ocean font-bold'>
             Register now
           </button>
-          <span className='px-6 italic text-sm'>Schedule available soon</span>
         </div>
       </div>
       <div className='lg:pr-20 xl:pr-20'>
