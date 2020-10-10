@@ -3,40 +3,31 @@ import { FunctionComponent, Ref } from 'react'
 const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop - 100)
 
 type NavbarProps = {
-  homeRef: Ref<unknown>
-  experienceRef: Ref<unknown>
-  partnersRef: Ref<unknown>
-  faqRef: Ref<unknown>
-  socialMediaRef: Ref<unknown>
+  refs: Ref<unknown>[]
+  buttonNames: string[]
 }
 
-const Navbar: FunctionComponent<NavbarProps> = (props: NavbarProps) => (
-  <div
-    id='navbar'
-    className='py-6 w-full flex items-center justify-center fixed bg-ocean bg-opacity-75 top-0 z-50'>
-    <div className='w-full sm:w-full md:w-full lg:w-2/3 xl:w-3/10 flex items-center justify-between px-8'>
+const Navbar: FunctionComponent<NavbarProps> = (props: NavbarProps) => {
+  let buttons = []
+  if (props.refs.length === props.buttonNames.length) {
+    buttons = props.buttonNames.map((name, idx) => (
       <a
-        onClick={() => scrollToRef(props.homeRef)}
+        onClick={() => scrollToRef(props.refs[idx])}
+        key={name}
         className='link cursor-pointer font-medium text-xl text-grayed hover:text-fuschia'>
-        Home
+        {name}
       </a>
-      <a
-        onClick={() => scrollToRef(props.experienceRef)}
-        className='link cursor-pointer font-medium text-xl text-grayed hover:text-fuschia'>
-        Experience
-      </a>
-      <a
-        onClick={() => scrollToRef(props.faqRef)}
-        className='link cursor-pointer font-medium text-xl text-grayed hover:text-fuschia'>
-        FAQs
-      </a>
-      <a
-        onClick={() => scrollToRef(props.socialMediaRef)}
-        className='link cursor-pointer font-medium text-xl text-grayed hover:text-fuschia'>
-        Social Media
-      </a>
+    ))
+  }
+  return (
+    <div
+      id='navbar'
+      className='py-6 w-full flex items-center justify-center fixed bg-ocean bg-opacity-75 top-0 z-50'>
+      <div className='w-full sm:w-full md:w-full lg:w-2/3 xl:w-3/10 flex items-center justify-between px-8'>
+        {buttons}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Navbar
