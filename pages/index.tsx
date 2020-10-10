@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import Navbar from '../components/navbar'
 import Hero from '../components/hero'
 import Speakers from '../components/speakers'
@@ -8,11 +9,12 @@ import Partners from '../components/partners'
 import FAQ from '../components/faq'
 import SocialMedia from '../components/social-media'
 import Footer from '../components/footer'
+import Schedule from '../components/schedule'
 
 const Home = (): JSX.Element => {
   const homeRef = useRef(null)
   const experienceRef = useRef(null)
-  const partnersRef = useRef(null)
+  const scheduleRef = useRef(null)
   const faqRef = useRef(null)
   const socialMediaRef = useRef(null)
   return (
@@ -22,11 +24,8 @@ const Home = (): JSX.Element => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar
-        homeRef={homeRef}
-        experienceRef={experienceRef}
-        partnersRef={partnersRef}
-        faqRef={faqRef}
-        socialMediaRef={socialMediaRef}
+        refs={[homeRef, experienceRef, scheduleRef, faqRef]}
+        buttonNames={['Home', 'Experience', 'Schedule', 'FAQs']}
       />
       <section ref={homeRef}>
         <Hero />
@@ -36,6 +35,9 @@ const Home = (): JSX.Element => {
       </section> */}
       <section ref={experienceRef}>
         <Tracks />
+      </section>
+      <section ref={scheduleRef}>
+        <Schedule />
       </section>
       {/* <section ref={partnersRef}>
         <Partners />
