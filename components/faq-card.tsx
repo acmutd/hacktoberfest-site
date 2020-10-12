@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import firebase from '../services/firebase'
 
 type FAQCardProps = {
   question: string
@@ -8,7 +9,13 @@ type FAQCardProps = {
 const FAQCard = (props: FAQCardProps): JSX.Element => {
   const [expanded, setExpanded] = useState(false)
   const arrow = expanded ? '\u25BC' : '\u25B6'
-  const toggle = () => setExpanded(!expanded)
+  const toggle = () => {
+    firebase.analytics().logEvent('faq_toggle', {
+      toShown: !expanded,
+      question: props.question,
+    })
+    setExpanded(!expanded)
+  }
   return (
     <div className='mx-auto px-8' style={{ maxWidth: '970px' }}>
       <div className='flex flex-row items-top pb-4 text-white hover:text-fuschia transition-all duration-75 ease-in-out'>
