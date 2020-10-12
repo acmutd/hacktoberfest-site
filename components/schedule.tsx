@@ -3,10 +3,18 @@ import classNames from 'classnames'
 import ScheduleEvent, { ScheduleEventMobile } from './schedule-event'
 import schedule from '../schedule-data'
 import useWindowDimensions from '../util/use-window-dimensions'
+import firebase from '../services/firebase'
 
 const Schedule = (): JSX.Element => {
   const { width } = useWindowDimensions()
   const [scheduleShown, setScheduleShown] = useState(false)
+
+  const scheduleToggle = () => {
+    firebase
+      .analytics()
+      .logEvent('schedule_toggle', { toShown: !scheduleShown, content_id: 'schedule_v1' })
+    setScheduleShown(!scheduleShown)
+  }
 
   return (
     <div className='mt-10'>
@@ -19,7 +27,7 @@ const Schedule = (): JSX.Element => {
       <div className='my-4 flex items-center'>
         <button
           className='my-0 mx-auto text-md font-medium text-fuschia text-center cursor-pointer'
-          onClick={() => setScheduleShown(!scheduleShown)}>
+          onClick={scheduleToggle}>
           {scheduleShown ? 'Hide' : 'Show'} Schedule
         </button>
       </div>

@@ -1,4 +1,5 @@
 import * as firebase from 'firebase'
+import 'firebase/analytics'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -12,4 +13,10 @@ const firebaseConfig = {
 }
 
 const app = firebase.apps.length > 0 ? firebase.app() : firebase.initializeApp(firebaseConfig)
+
+if (typeof window !== 'undefined' && !firebase.apps.length) {
+  firebase.analytics()
+}
 export const firestore = app.firestore()
+
+export default app
