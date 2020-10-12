@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import ScheduleEvent, { ScheduleEventMobile } from './schedule-event'
 import schedule from '../schedule-data'
@@ -8,6 +8,10 @@ import firebase from '../services/firebase'
 const Schedule = (): JSX.Element => {
   const { width } = useWindowDimensions()
   const [scheduleShown, setScheduleShown] = useState(false)
+
+  useEffect(() => {
+    setScheduleShown(true)
+  }, [])
 
   const scheduleToggle = () => {
     firebase
