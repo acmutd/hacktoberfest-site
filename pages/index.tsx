@@ -30,9 +30,9 @@ const Home = (): JSX.Element => {
       <section ref={homeRef}>
         <Hero />
       </section>
-      {/* <section>
+      <section>
         <Speakers />
-      </section> */}
+      </section>
       <a id='experience' />
       <section ref={experienceRef}>
         <Tracks />
