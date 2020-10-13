@@ -1,22 +1,29 @@
 import { useState } from 'react'
 
 const Speakers = (): JSX.Element => {
-  const [selectedSpeaker, setSelectedSpeaker] = useState<number>(null)
-  const speakerList = ['Jeff Dean', 'Tim Cook', 'Satya Nadella', 'Test Human']
-  const bios = ['resident god at Google', 'CEO at $AAPL', 'CEO at $MSFT', 'not a real human']
+  // const [selectedSpeaker, setSelectedSpeaker] = useState<number>(null)
+  // const speakerList = ['Jeff Dean', 'Tim Cook', 'Satya Nadella', 'Test Human']
+  // const bios = ['resident god at Google', 'CEO at $AAPL', 'CEO at $MSFT', 'not a real human']
   return (
     <div className='pt-20 pb-10'>
-      <div className='flex flex-row justify-center items-center'>
-        <div className='mr-8'>
-          <h4 className='text-2xl'>
-            featuring <span className='text-fuschia'>keynote speaker</span>
-          </h4>
-          <h3 className='text-5xl font-bold mt-1 mb-1'>Test Speaker</h3>
-          <h4 className='text-xl italic'>CEO of ACM</h4>
-        </div>
-        <img src='/img/jeff-dean-sample.png' alt='god' width='250' />
+      <div className='text-2xl text-center'>
+        with <span className='text-fuschia'>featured speakers</span>
       </div>
-      <h3 className='pt-32 pb-8 text-center font-bold text-3xl'>Other Featured Speakers</h3>
+
+      <div className='mx-auto my-0' style={{ maxWidth: '1000px' }}>
+        <FeaturedSpeaker
+          name='Rocio Montes'
+          bio='Staff Software Engineer leading Open Source and Inner Source at Intuit, Intuit Office of the Chief Architect, Co-Chair for Grace Hopper Conference’ Open Source Day ‘20, leadership team for San Diego “Girl Develop it” and Co-founder of “Emar”'
+          imageURL='/img/headshots/featured/rocio-montes-headshot-circle1000.png'
+        />
+        <FeaturedSpeaker
+          name='Chandini Portteus'
+          bio='Principal & CEO @ Portteus Consulting, Founding Partner & Chair at US Blockchain Advocacy Partners, President and Executive-in-Residence @ EBW2020 (Empower a billion women by 2020), President & CEO at Wipe Out Kids’ Cancer (WOKC)'
+          imageURL='/img/headshots/featured/chandini-portteus-headshot-circle375.png'
+        />
+      </div>
+
+      {/* <h3 className='pt-20 pb-8 text-center font-bold text-3xl'>Full Speaker List</h3>
       <div className='flex flex-row flex-wrap justify-center items-center'>
         <img
           src='/img/sample-person-1.jpeg'
@@ -58,9 +65,27 @@ const Speakers = (): JSX.Element => {
         <h4 className='italic'>
           {selectedSpeaker !== null ? bios[selectedSpeaker] : <span>&#8203;</span>}
         </h4>
-      </div>
+      </div>*/}
     </div>
   )
 }
+
+interface FeaturedSpeakerProps {
+  name: string
+  bio: string
+  imageURL: string
+}
+
+const FeaturedSpeaker = (props: FeaturedSpeakerProps): JSX.Element => (
+  <div className='px-8 py-8 flex flex-col-reverse md:flex-row lg:flex-row xl:flex-row justify-center items-center'>
+    <div className='md:mr-16 lg:mr-16 xl:mr-16 mt-4 md:mt-0 lg:mt-0 xl:mt-0'>
+      <h3 className='text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-bold mt-1 mb-1'>
+        {props.name}
+      </h3>
+      <h4 className='text-md italic max-w-sm'>{props.bio}</h4>
+    </div>
+    <img src={props.imageURL} alt={props.name} width='250' />
+  </div>
+)
 
 export default Speakers
