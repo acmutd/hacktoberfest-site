@@ -3,7 +3,7 @@ import faq from '../faq'
 
 const FAQ = (): JSX.Element => {
   return (
-    <div className='my-20'>
+    <div className='mt-10 lg:-mt-16 xl:-mt-16'>
       <h2 className='font-bold text-4xl flex items-center justify-center text-center'>
         Frequently Asked Questions
       </h2>
