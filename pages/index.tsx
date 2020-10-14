@@ -10,6 +10,7 @@ import FAQ from '../components/faq'
 import SocialMedia from '../components/social-media'
 import Footer from '../components/footer'
 import Schedule from '../components/schedule'
+import Thanks from '../components/thanks'
 
 const Home = (): JSX.Element => {
   const homeRef = useRef(null)
@@ -73,6 +74,10 @@ const Home = (): JSX.Element => {
       <a id='social-media' />
       <section ref={socialMediaRef}>
         <SocialMedia />
+      </section>
+      <a id='thanks' />
+      <section>
+        <Thanks />
       </section>
       <Footer />
     </>
