@@ -1,7 +1,7 @@
 const credits = [
   {
     name: 'Harsha Srikara',
-    title: 'Director',
+    title: 'Director of Development',
     linkedin: 'https://www.linkedin.com/in/harshasrikara/',
   },
   {
