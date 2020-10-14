@@ -10,6 +10,7 @@ import FAQ from '../components/faq'
 import SocialMedia from '../components/social-media'
 import Footer from '../components/footer'
 import Schedule from '../components/schedule'
+import Thanks from '../components/thanks'
 
 const Home = (): JSX.Element => {
   const homeRef = useRef(null)
@@ -20,8 +21,30 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>ACM Hacktoberfest</title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>ACM Hacktoberfest – Home</title>
+        <meta name='title' content='ACM Hacktoberfest – Home' />
+        <meta
+          name='description'
+          content="ACM UTD's celebration of open source as part of DigitalOcean's month-long Hacktoberfest event. Come for the talks and workshops, stay for the prizes. Register today."
+        />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://hacktoberfest.acmutd.co/' />
+        <meta property='og:title' content='ACM Hacktoberfest – Home' />
+        <meta
+          property='og:description'
+          content="ACM UTD's celebration of open source as part of DigitalOcean's month-long Hacktoberfest event. Come for the talks and workshops, stay for the prizes. Register today."
+        />
+        <meta property='og:image' content='https://hacktoberfest.acmutd.co/img/metadata-img.png' />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://hacktoberfest.acmutd.co/' />
+        <meta property='twitter:title' content='ACM Hacktoberfest – Home' />
+        <meta
+          property='twitter:description'
+          content="ACM UTD's celebration of open source as part of DigitalOcean's month-long Hacktoberfest event. Come for the talks and workshops, stay for the prizes. Register today."
+        />
+        <meta
+          property='twitter:image'
+          content='https://hacktoberfest.acmutd.co/img/metadata-img.png'></meta>
       </Head>
       <Navbar
         refs={[homeRef, experienceRef, scheduleRef, faqRef]}
@@ -30,9 +53,9 @@ const Home = (): JSX.Element => {
       <section ref={homeRef}>
         <Hero />
       </section>
-      {/* <section>
+      <section>
         <Speakers />
-      </section> */}
+      </section>
       <a id='experience' />
       <section ref={experienceRef}>
         <Tracks />
@@ -51,6 +74,10 @@ const Home = (): JSX.Element => {
       <a id='social-media' />
       <section ref={socialMediaRef}>
         <SocialMedia />
+      </section>
+      <a id='thanks' />
+      <section>
+        <Thanks />
       </section>
       <Footer />
     </>

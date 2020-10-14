@@ -5,6 +5,8 @@ interface Event {
   name: string
   timeStr: string
   wide?: boolean
+  partner?: string
+  description?: string
   doubled?: boolean
 }
 
@@ -19,37 +21,55 @@ const schedule: Event[] = [
   {
     track: 2,
     offset: 0,
-    length: 90,
+    length: 60,
     name: 'ECS Student Org Fair',
-    timeStr: '9–10:30 AM CST',
+    partner: 'ECS Student Organizations',
+    timeStr: '9–10 AM CST',
   },
   {
     track: 3,
     offset: 2,
     length: 30,
     name: 'Virtual Scavenger Hunt',
+    partner: 'ACM Community',
     timeStr: '9:30–10 AM CST',
+  },
+  {
+    track: 1,
+    offset: 4,
+    length: 30,
+    name: 'Hacktoberfest Kickoff',
+    wide: true,
+    timeStr: '10–10:30 AM CST',
   },
   {
     track: 1,
     offset: 6,
     length: 30,
-    name: 'Hacktoberfest Kickoff',
-    wide: true,
+    name: 'Q & A with Rocio Montes',
     timeStr: '10:30–11 AM CST',
   },
-  // {
-  //   track: 1,
-  //   offset: 8,
-  //   length: 30,
-  //   name: 'UTD Grades Talk',
-  //   timeStr: '11–11:30 AM CST',
-  // },
+  {
+    track: 3,
+    offset: 6,
+    length: 30,
+    name: 'Minecraft',
+    partner: 'ACM Community',
+    timeStr: '12:00–12:30 PM CST',
+  },
+  {
+    track: 1,
+    offset: 8,
+    length: 30,
+    name: 'Women in Tech Panel',
+    timeStr: '11–11:30 AM CST',
+  },
   {
     track: 3,
     offset: 8,
     length: 30,
     name: 'Github Kahoot',
+    partner: 'ACM Community',
     timeStr: '11–11:30 AM CST',
   },
   {
@@ -57,6 +77,7 @@ const schedule: Event[] = [
     offset: 10,
     length: 60,
     name: 'Personal Website Workshop',
+    partner: 'ACM Education',
     timeStr: '11:30 AM CST – 12:30 PM CST',
   },
   {
@@ -64,13 +85,7 @@ const schedule: Event[] = [
     offset: 12,
     length: 30,
     name: 'AI Is All You Need: A Showcase of Why AI Is Cool',
-    timeStr: '12:00–12:30 PM CST',
-  },
-  {
-    track: 3,
-    offset: 12,
-    length: 30,
-    name: 'Minecraft',
+    partner: 'Artificial Intelligence Society',
     timeStr: '12:00–12:30 PM CST',
   },
   {
@@ -85,14 +100,16 @@ const schedule: Event[] = [
     track: 1,
     offset: 17,
     length: 60,
-    name: 'ACM Projects Workshop',
+    name: 'Reaction-ary Business: React Workshop',
+    partner: 'ACM Projects',
     timeStr: '1:15–2:15 PM CST',
   },
   {
     track: 2,
     offset: 19,
     length: 30,
-    name: 'Managing Mental Health & Imposter Syndrome',
+    name: 'Spilling the Tea with WWC',
+    partner: 'Women Who Compute',
     timeStr: '1:45–2:15 PM CST',
   },
   {
@@ -100,6 +117,7 @@ const schedule: Event[] = [
     offset: 19,
     length: 30,
     name: 'Skribbl.io w/ oSTEM',
+    partner: 'oSTEM',
     timeStr: '1:45–2:15 PM CST',
   },
   {
@@ -114,6 +132,7 @@ const schedule: Event[] = [
     offset: 24,
     length: 60,
     name: 'Comets of Wall Street: Data Analysis Workshop',
+    partner: 'ACM Research',
     timeStr: '3:00–4:00 PM CST',
   },
   {
@@ -121,6 +140,7 @@ const schedule: Event[] = [
     offset: 26,
     length: 30,
     name: 'The Model Minority Myth',
+    partner: 'SASE UTD',
     timeStr: '3:30–4:00 PM CST',
   },
   {
@@ -128,6 +148,7 @@ const schedule: Event[] = [
     offset: 26,
     length: 30,
     name: 'Virtual Murder Mystery #1',
+    partner: 'ACM Community',
     timeStr: '3:30–4:00 PM CST',
   },
   {
@@ -135,13 +156,15 @@ const schedule: Event[] = [
     offset: 28,
     length: 30,
     name: 'Tips & Tricks for Hackathons',
+    partner: 'ACM Community',
     timeStr: '4:00–4:30 PM CST',
   },
   {
     track: 2,
     offset: 28,
     length: 30,
-    name: 'Hacking the Gender Gap',
+    name: 'Jeopardy with SWE',
+    partner: 'Society of Women Engineers & WEHack',
     timeStr: '4:00–4:30 PM CST',
   },
   {
@@ -149,6 +172,7 @@ const schedule: Event[] = [
     offset: 28,
     length: 60,
     name: 'Cooking w/ Willie',
+    partner: 'Willie Chalmers III',
     timeStr: '4:00–5:00 PM CST',
   },
   {
@@ -156,13 +180,15 @@ const schedule: Event[] = [
     offset: 30,
     length: 30,
     name: 'Intro to Cloud & GCP',
+    partner: 'Developer Student Clubs',
     timeStr: '4:30–5:00 PM CST',
   },
   {
     track: 1,
     offset: 32,
     length: 60,
-    name: 'ACM Development Workshop',
+    name: 'Build an API Workshop',
+    partner: 'ACM Development',
     timeStr: '5:00–6:00 PM CST',
   },
   {
@@ -170,6 +196,7 @@ const schedule: Event[] = [
     offset: 34,
     length: 30,
     name: 'Managing College Life',
+    partner: 'WiCyS',
     timeStr: '5:30–6:00 PM CST',
   },
   {
@@ -180,38 +207,35 @@ const schedule: Event[] = [
     timeStr: '5:30–6:00 PM CST',
   },
   {
-    track: 1,
+    track: 2,
     offset: 36,
     length: 30,
-    name: 'Women in Tech Panel',
+    name: 'WTF is DeFi?',
+    partner: 'UTD Blockchain Club',
     timeStr: '6:00–6:30 PM CST',
   },
-  // {
-  //   track: 2,
-  //   offset: 36,
-  //   length: 30,
-  //   name: 'SkillsUSA Guest Speaker',
-  //   timeStr: '5:30–6:00 PM CST',
-  // },
   {
     track: 3,
     offset: 36,
     length: 30,
     name: 'MS Paint w/ Bob Ross',
+    partner: 'ACM Community',
     timeStr: '6:00–6:30 PM CST',
   },
   {
     track: 1,
     offset: 38,
     length: 60,
-    name: 'ACM Community Team Workshop',
+    name: 'Computer Graphics Workshop',
+    partner: 'ACM Community',
     timeStr: '6:30–7:30 PM CST',
   },
   {
     track: 2,
     offset: 40,
     length: 30,
-    name: 'IEEE Guest Speaker',
+    name: 'Bridging the Gap Between Software and Hardware',
+    partner: 'IEEE UTD',
     timeStr: '7:00–7:30 PM CST',
   },
   {
@@ -219,27 +243,36 @@ const schedule: Event[] = [
     offset: 42,
     length: 15,
     name: 'Basics of Accessibility',
+    partner: 'Girls Who Code',
     timeStr: '7:30–7:45 PM CST',
+  },
+  {
+    track: 1,
+    offset: 43,
+    length: 15,
+    name: 'MLH Fellowship Talk',
+    timeStr: '7:45–8:00 PM CST',
+  },
+  {
+    track: 3,
+    offset: 42,
+    length: 30,
+    name: 'Virtual Murder Mystery #2',
+    timeStr: '7:30–8:00 PM CST',
   },
   // {
   //   track: 1,
-  //   offset: 42,
-  //   length: 15,
-  //   name: 'MLH Fellowship Talk',
-  //   timeStr: '7:30–7:45 PM CST',
-  // },
-  // {
-  //   track: 1,
-  //   offset: 43,
-  //   length: 45,
-  //   name: 'Industry Panel',
-  //   timeStr: '7:45–8:30 PM CST',
+  //   offset: 44,
+  //   length: 30,
+  //   name: "Chandini's Talk",
+  //   timeStr: '8:00–8:30 PM CST',
   // },
   {
     track: 3,
     offset: 44,
     length: 30,
-    name: 'Virtual Murder Mystery #2',
+    name: 'Trivia with SkillsUSA',
+    partner: 'SkillsUSA',
     timeStr: '8:00–8:30 PM CST',
   },
   {
@@ -255,6 +288,7 @@ const schedule: Event[] = [
     offset: 48,
     length: 90,
     name: 'ACM Community Among Us Afterparty',
+    partner: 'ACM Community',
     timeStr: '9:00 PM CST onwards',
   },
 ]

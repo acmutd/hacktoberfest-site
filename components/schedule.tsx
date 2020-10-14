@@ -113,7 +113,6 @@ const Schedule = (): JSX.Element => {
         .schedule-wrapper {
           margin: 0 auto;
           max-width: 1000px;
-          overflow: scroll;
         }
         .schedule {
           display: grid;
