@@ -11,7 +11,8 @@ const faq: FAQFormat[] = [
   },
   {
     q: 'Is ACM Hacktoberfest a hackathon?',
-    a: 'Nope! This event is a casual come and go event with lots of opportunities to interact, learn and have a great time!',
+    a:
+      'Nope! This event is a casual come and go event with lots of opportunities to interact, learn and have a great time!',
   },
   {
     q: 'When is ACM Hacktoberfest?',
