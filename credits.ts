@@ -57,7 +57,7 @@ const credits = [
   {
     name: 'Nhi Huynh',
     title: 'Design',
-    linkedin: 'https://www.linkedin.com/in/nhihuynh1/',
+    linkedin: 'https://www.linkedin.com/in/nhi-huynh-56919a1a6/',
   },
   {
     name: 'Zhu Lei',
