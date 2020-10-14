@@ -1,6 +1,12 @@
 import credits from '../credits'
+import firebase from '../services/firebase'
 
 const Thanks = (): JSX.Element => {
+  const linkClick = (name: string) => () => {
+    firebase.analytics().logEvent('credits_link_click', {
+      name,
+    })
+  }
   return (
     <div className='mt-20 text-center'>
       <h2 className='font-bold text-4xl flex items-center justify-center'>
@@ -20,6 +26,7 @@ const Thanks = (): JSX.Element => {
               className='cursor-pointer font-medium text-fuschia hover:text-pink-500'
               href={person.linkedin || null}
               target='_blank'
+              onClick={linkClick(person.name)}
               rel='noopener noreferrer'>
               {person.name}
             </a>
