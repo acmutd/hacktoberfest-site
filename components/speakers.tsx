@@ -18,7 +18,7 @@ const Speakers = (): JSX.Element => {
         />
         <FeaturedSpeaker
           name='Chandini Portteus'
-          bio='Principal & CEO @ Portteus Consulting, Founding Partner & Chair at US Blockchain Advocacy Partners, President and Executive-in-Residence @ EBW2020 (Empower a billion women by 2020), President & CEO at Wipe Out Kids’ Cancer (WOKC)'
+          bio='Principal & CEO @ Portteus Consulting, Founding Partner & Chair at US Blockchain Advocacy Partners, President and Executive-in-Residence @ EBW2020 (Empower a billion women by 2020), Former CEO of Livestrong, Wipe Out Kids Cancer and Chief Mission Officer of Susan G. Komen'
           imageURL='/img/headshots/featured/chandini-portteus-headshot-circle375.png'
         />
       </div>
