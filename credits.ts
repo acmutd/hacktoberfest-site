@@ -55,9 +55,9 @@ const credits = [
     linkedin: 'https://www.linkedin.com/in/neharode/',
   },
   {
-    name: 'Angelica Avorque',
+    name: 'Anjelica Avorque',
     title: 'Design',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/anjelica-avorque/',
   },
   {
     name: 'Nhi Huynh',
