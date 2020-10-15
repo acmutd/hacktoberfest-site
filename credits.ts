@@ -50,6 +50,11 @@ const credits = [
     linkedin: 'https://www.linkedin.com/in/beatrice-agron-9b625117a/',
   },
   {
+    name: 'Neha Rode',
+    title: 'Content Writer',
+    linkedin: 'https://www.linkedin.com/in/neharode/',
+  },
+  {
     name: 'Angelica Avorque',
     title: 'Design',
     linkedin: '',
