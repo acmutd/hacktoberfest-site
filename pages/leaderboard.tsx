@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { LeaderboardNavbar } from '../components/navbar'
+import { NonHomeNavbar } from '../components/navbar'
 import Rankings from '../components/rankings'
 
 const Leaderboard = (): JSX.Element => {
@@ -9,7 +9,7 @@ const Leaderboard = (): JSX.Element => {
         <title>ACM Hacktoberfest</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <LeaderboardNavbar />
+      <NonHomeNavbar />
       <div className='mt-24'></div>
       <h2 className='font-bold text-4xl flex items-center justify-center'>
         <img src='/img/sparkles.svg' className='-ml-20 pr-8 -mt-6 h-3 absolute z-10' alt='' />

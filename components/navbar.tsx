@@ -31,7 +31,7 @@ const Navbar: FunctionComponent<NavbarProps> = (props: NavbarProps) => {
   )
 }
 
-export const LeaderboardNavbar = () => (
+export const NonHomeNavbar = (): JSX.Element => (
   <div
     id='navbar'
     className='py-6 w-full flex items-center justify-center fixed bg-ocean bg-opacity-75 top-0 z-50'>
