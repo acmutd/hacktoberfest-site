@@ -21,7 +21,7 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>ACM Hacktoberfest – Home</title>
+        <title>Home – ACM Hacktoberfest</title>
         <meta name='title' content='ACM Hacktoberfest – Home' />
         <meta
           name='description'
@@ -71,13 +71,13 @@ const Home = (): JSX.Element => {
       <section ref={faqRef}>
         <FAQ />
       </section>
-      <a id='social-media' />
-      <section ref={socialMediaRef}>
-        <SocialMedia />
-      </section>
       <a id='thanks' />
       <section>
         <Thanks />
+      </section>
+      <a id='social-media' />
+      <section ref={socialMediaRef}>
+        <SocialMedia />
       </section>
       <Footer />
     </>

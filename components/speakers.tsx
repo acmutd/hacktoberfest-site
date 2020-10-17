@@ -15,11 +15,13 @@ const Speakers = (): JSX.Element => {
           name='Rocio Montes'
           bio='Staff Software Engineer leading Open Source and Inner Source at Intuit, Intuit Office of the Chief Architect, Co-Chair for Grace Hopper Conference’ Open Source Day ‘20, leadership team for San Diego “Girl Develop it” and Co-founder of “Emar”'
           imageURL='/img/headshots/featured/rocio-montes-headshot-circle1000.png'
+          link='https://www.linkedin.com/in/montesrocio'
         />
         <FeaturedSpeaker
           name='Chandini Portteus'
           bio='Principal & CEO @ Portteus Consulting, Founding Partner & Chair at US Blockchain Advocacy Partners, President and Executive-in-Residence @ EBW2020 (Empower a billion women by 2020), Former CEO of Livestrong, Wipe Out Kids Cancer and Chief Mission Officer of Susan G. Komen'
           imageURL='/img/headshots/featured/chandini-portteus-headshot-circle375.png'
+          link='https://www.linkedin.com/in/chandini-portteus-mph-4664a55'
         />
       </div>
 
@@ -74,13 +76,16 @@ interface FeaturedSpeakerProps {
   name: string
   bio: string
   imageURL: string
+  link: string
 }
 
 const FeaturedSpeaker = (props: FeaturedSpeakerProps): JSX.Element => (
   <div className='px-8 py-8 flex flex-col-reverse md:flex-row lg:flex-row xl:flex-row justify-center items-center'>
     <div className='md:mr-16 lg:mr-16 xl:mr-16 mt-4 md:mt-0 lg:mt-0 xl:mt-0'>
-      <h3 className='text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-bold mt-1 mb-1'>
-        {props.name}
+      <h3 className='text-2xl md:text-2xl lg:text-3xl xl:text-5xl font-bold mt-1 mb-1 cursor-pointer'>
+        <a href={props.link} target='_blank' rel='noreferrer' className='hover:text-fuschia'>
+          {props.name}
+        </a>
       </h3>
       <h4 className='text-md italic max-w-sm'>{props.bio}</h4>
     </div>
