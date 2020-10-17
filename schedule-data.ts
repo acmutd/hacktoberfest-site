@@ -10,6 +10,7 @@ interface Event {
   doubled?: boolean
   id: string
   joinLink: string
+  ytLive?: boolean
 }
 
 const schedule: Event[] = [
@@ -58,6 +59,7 @@ const schedule: Event[] = [
     description:
       'Kick off an amazing day of talks and workshops by hearing from the ACM Hacktoberfest organizer team and from Rocio Montes!',
     joinLink: 'https://hack.acmutd.co/kickoff',
+    ytLive: true,
   },
   {
     track: 1,
@@ -258,6 +260,7 @@ const schedule: Event[] = [
     description:
       '6 Items. 60 minutes. A race against the clock. Join Willie Chalmers III as he takes meal prep to the next level.',
     joinLink: 'https://hack.acmutd.co/cooking',
+    ytLive: true,
   },
   {
     track: 2,
