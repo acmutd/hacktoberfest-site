@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import firebase from '../services/firebase'
 
 const Hero = (): JSX.Element => {
@@ -30,6 +31,11 @@ const Hero = (): JSX.Element => {
               className='mt-6 rounded-full py-2 px-8 text-lg bg-pond hover:bg-blue-300 hover:text-black text-ocean font-bold'>
               Register now
             </button>
+            <Link href='/leaderboard'>
+              <button className='ml-4 mt-6 rounded-full py-2 px-8 text-lg bg-pink-500 hover:bg-pink-800 text-gray-300 hover:text-gray-400 font-bold'>
+                Leaderboard
+              </button>
+            </Link>
           </div>
         </div>
         <div className='lg:pr-20 xl:pr-20'>
