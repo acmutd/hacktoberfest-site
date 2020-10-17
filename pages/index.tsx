@@ -71,13 +71,13 @@ const Home = (): JSX.Element => {
       <section ref={faqRef}>
         <FAQ />
       </section>
-      <a id='social-media' />
-      <section ref={socialMediaRef}>
-        <SocialMedia />
-      </section>
       <a id='thanks' />
       <section>
         <Thanks />
+      </section>
+      <a id='social-media' />
+      <section ref={socialMediaRef}>
+        <SocialMedia />
       </section>
       <Footer />
     </>
