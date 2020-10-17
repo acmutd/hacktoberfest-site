@@ -163,6 +163,12 @@ const credits: CreditsType[] = [
     role: 'outreach/liasons',
   },
   {
+    name: 'David Ochoa',
+    title: 'Projects Liaison',
+    linkedin: 'https://www.linkedin.com/in/davidaochoa/',
+    role: 'outreach/liasons',
+  },
+  {
     name: 'George Goodman',
     title: 'Community Liaison',
     linkedin: 'https://blitcrush.com/',
