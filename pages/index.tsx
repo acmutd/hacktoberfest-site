@@ -21,7 +21,7 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Head>
-        <title>ACM Hacktoberfest – Home</title>
+        <title>Home – ACM Hacktoberfest</title>
         <meta name='title' content='ACM Hacktoberfest – Home' />
         <meta
           name='description'
