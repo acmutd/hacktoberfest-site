@@ -86,6 +86,7 @@ const Schedule = (): JSX.Element => {
                     doubled={event.doubled}
                     timeStr={event.timeStr}
                     key={idx}
+                    id={event.id}
                   />
                 )
               )
@@ -102,6 +103,7 @@ const Schedule = (): JSX.Element => {
                     doubled={event.doubled}
                     timeStr={event.timeStr}
                     key={idx}
+                    id={event.id}
                   />
                 )
               )
