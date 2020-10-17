@@ -17,7 +17,7 @@ const schedule: Event[] = [
     offset: 0,
     length: 60,
     name: 'Check-In',
-    timeStr: '9–10 AM CST',
+    timeStr: '9:00–10:00 AM CST',
     id: 'checkin',
   },
   {
@@ -35,7 +35,7 @@ const schedule: Event[] = [
     length: 30,
     name: 'Chandini Portteus: Entrepreneurship Talk',
     partner: 'Chandini Portteus',
-    timeStr: '9:30–10 AM CST',
+    timeStr: '9:30–10:00 AM CST',
     id: 'chandini-portteus-talk',
   },
   {
@@ -44,7 +44,7 @@ const schedule: Event[] = [
     length: 30,
     name: 'Hacktoberfest Kickoff + Featured Speaker Talk',
     wide: true,
-    timeStr: '10–10:30 AM CST',
+    timeStr: '10:00–10:30 AM CST',
     id: 'kickoff',
   },
   {
@@ -62,7 +62,7 @@ const schedule: Event[] = [
     length: 30,
     name: 'Minecraft',
     partner: 'ACM Community',
-    timeStr: '12:00–12:30 PM CST',
+    timeStr: '10:30–11:00 AM CST',
     id: 'minecraft',
   },
   {
@@ -70,7 +70,7 @@ const schedule: Event[] = [
     offset: 8,
     length: 30,
     name: 'Women in Tech Panel',
-    timeStr: '11–11:30 AM CST',
+    timeStr: '11:00–11:30 AM CST',
     id: 'women-tech-panel',
   },
   {
@@ -79,7 +79,7 @@ const schedule: Event[] = [
     length: 30,
     name: 'Github Kahoot',
     partner: 'ACM Community',
-    timeStr: '11–11:30 AM CST',
+    timeStr: '11:00–11:30 AM CST',
     id: 'github-kahoot',
   },
   {
@@ -88,7 +88,7 @@ const schedule: Event[] = [
     length: 60,
     name: 'Personal Website Workshop',
     partner: 'ACM Education',
-    timeStr: '11:30 AM CST – 12:30 PM CST',
+    timeStr: '11:30 AM CST–12:30 PM CST',
     id: 'personal-site-workshop',
   },
   {
