@@ -6,10 +6,10 @@ interface Event {
   timeStr: string
   wide?: boolean
   partner?: string
-  description?: string
+  description: string
   doubled?: boolean
   id: string
-  joinLink?: string
+  joinLink: string
 }
 
 const schedule: Event[] = [
@@ -67,6 +67,7 @@ const schedule: Event[] = [
     partner: 'Rocio Montes',
     timeStr: '10:30–11 AM CST',
     id: 'q-a-rocio-montes',
+    description: 'Join Rocio Montes, a leader in open source, for a Q&A session!',
     joinLink: 'https://hack.acmutd.co/rocio',
   },
   {
