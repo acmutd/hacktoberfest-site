@@ -147,7 +147,7 @@ const schedule: Event[] = [
     track: 1,
     offset: 17,
     length: 60,
-    name: 'Reaction-ary Business: React Workshop',
+    name: 'React-tionary Business: React Workshop',
     partner: 'ACM Projects',
     timeStr: '1:15–2:15 PM CST',
     id: 'react-workshop',
