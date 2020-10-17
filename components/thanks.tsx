@@ -14,7 +14,7 @@ const Thanks = (): JSX.Element => {
         scenes.
       </div>
       {categories.map(cat => (
-        <div className='py-2 mx-auto my-0' style={{ maxWidth: '950px' }} key={cat}>
+        <div className='py-2 mx-auto my-0' style={{ maxWidth: '900px' }} key={cat}>
           <h1 className='text-xl'>{cat}</h1>
           <div
             className='flex flex-wrap flex-row justify-evenly px-4 mx-auto my-0'
