@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { NonHomeNavbar } from '../components/navbar'
-import Rankings from '../components/rankings'
+// import Rankings from '../components/rankings'
 
 const Leaderboard = (): JSX.Element => {
   return (
@@ -17,7 +17,10 @@ const Leaderboard = (): JSX.Element => {
         <span className='z-0'>Leaderboard</span>
       </h2>
       <div className='mt-8'>
-        <Rankings />
+        <div className='py-6 text-center w-full text-gray-300 text-lg'>
+          Leaderboard unavailable.
+        </div>
+        {/* <Rankings /> */}
       </div>
     </>
   )
